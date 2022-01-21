@@ -1,0 +1,34 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=remindme
+      - MONGO_INITDB_ROOT_PASSWORD=remindme
+    ports:
+      - 27017:27017
+
+  users-service:
+    build:
+        context: ./Services/Users/Users
+        dockerfile: dockerfile
+    restart: always
+    ports:
+      - 5005:5005
+    environment:
+      MongoDB__Host: mongo
+    depends_on:
+      - mongo
+
+
+  birthday-service:
+    build:
+        context: ./Services/Birthdays/Birthdays/Birthdays
+        dockerfile: dockerfile
+    restart: always
+    ports:
+      - 5006:5006
+    environment:
+      MongoDB__Host: mongo
+    depends_on:
+      - mongo
