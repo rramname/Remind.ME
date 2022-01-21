@@ -22,6 +22,8 @@
  
  ## System Architecture
  
+ https://github.com/rramname/Remind.ME/blob/main/system.png
+ 
  ## Future Enhancements
  * API Gateway will be implemented to take advantage of additional   security and logging features
  * Multiple subscriber instances can be created to point to the queue for system scalability
