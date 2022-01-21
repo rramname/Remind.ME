@@ -31,5 +31,14 @@
  * Can be made cloud native with Azure functions, postgresql etc
  
  ## Setup Instruction
+ * Navigate to Remind.ME\docker-compose.yaml and run "docker-compose up"
+   This will setup mongo DB database , User service at port 5005 and Birthday service at port 5006. 
+   User service (http://localhost:5005/swagger/index.html) can be used to create users
+   Birthday service (http://localhost:5006/swagger/index.html) can be used to create users
+ * Navigate to Remind.ME\Infrastructure\RabbitMQ and run "docker-compose up"
+   This will setup rabitMQ server at port http://localhost:15672/
+ * Now we can run Publisher service and Subscriber services using dotnet run at the root. (Dockerizing this is coming soon....)
+   Publisher will run in a loop and will hit mongo db database every 5 second to check if there are any message and if there are, it will send those to the queue.
+   As of now, in the config file, birthday queue has been specified. Different subscriber instance can be created for different type of reminders like Anniversary.
   
  
