@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  publisher:
+    build:
+        context: ./Publisher/Publisher
+        dockerfile: dockerfile
+    restart: always
+    environment:
+      MongoDB__Host: mongo
+    

@@ -1,0 +1,15 @@
+
+Infrastructure/Publisher/.vs/
+Infrastructure/Publisher/bin/
+Infrastructure/Publisher/obj/
+Infrastructure/Subscriber/.vs/
+Infrastructure/Subscriber/Subscriber/bin/
+Infrastructure/Subscriber/Subscriber/obj/
+Services/Birthdays/Birthdays/Birthdays/bin/
+Services/Users/Users/bin/
+Services/Users/Users/obj
+Infrastructure/Publisher/Publisher/bin/
+Infrastructure/Publisher/Publisher/obj/
+Services/Birthdays/Birthdays/Birthdays/obj/
+Services/Birthdays/Birthdays/Tests/obj/
+Services/Birthdays/Birthdays/.vs/
