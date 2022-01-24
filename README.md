@@ -3,12 +3,14 @@
 ## Functional Requirement
  * Develop a system that I can use to create reminders.
  * It should have an ability to create a new user.
- * It should have an ability to create reminders for different things like Birthdays, Anniversaries, Tax Dates etc.
+ * In future. it should have an ability to create reminders for different things like Birthdays, Anniversaries, Tax Dates etc.
 
 ## Assumptions
 
 ## Current Limitations
  * There is no UI. Swagger UI can be used to push data to the database
+ * There is no actual email being sent.
+ * There are no validations on the data.
  
 ## Technical Requirements
  * The system should have a database.
@@ -19,6 +21,7 @@
  * All code will be in .Net Core 3.1
  * Mongo DB database will be used to save the data
  * RabbitMQ will be used to host the queues 
+ * Seq will be used for logging.
  
  ## System Architecture
  
