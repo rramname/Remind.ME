@@ -30,6 +30,9 @@ namespace Birthdays
         {
             var config = new Configurations();
             Configuration.Bind(config);
+
+            services.AddLogging(logConfig => logConfig.AddSeq( serverUrl: config.SeqURL,apiKey:config.SeqAPIKey ));
+
             var birthdayContext = new BirthdayContext(config.MongoDB);
 
             var repo = new  BirthdayRepository(birthdayContext);
