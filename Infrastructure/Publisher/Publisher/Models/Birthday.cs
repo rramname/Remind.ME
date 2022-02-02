@@ -9,10 +9,9 @@ namespace Publisher.Models
         [BsonId]
         public ObjectId InternalId { get; set; }
         public string Name { get; set; }
-        //public string Email { get; set; }
+        public string Email { get; set; }
         
-        //[BsonElement]
-        //[BsonDateTimeOptions(Kind = DateTimeKind.Local)]
-        //public DateTime Date { get; set; }
+        [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
+        public DateTime Date { get; set; }
     }
 }
